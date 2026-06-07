@@ -13,15 +13,12 @@ const confirmBtn = document.getElementById("confirm-btn");
 const modal = document.getElementById("instruction-modal");
 const closeModalBtn = document.getElementById("close-modal-btn");
 const acknowledgeBtn = document.getElementById("acknowledge-btn");
-const brandSubtitle = document.getElementById("brand-subtitle");
 
 const focusableSelector =
   'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
 let lastFocusedElement = null;
 
 document.title = config.brandTitle;
-brandSubtitle.textContent =
-  "Vào App Thanh toán, chọn chức năng quét mã QR rồi quét mã QR bên dưới:";
 transferNote.textContent = config.transferNote;
 qrImage.src = config.qrImageUrl;
 
