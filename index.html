@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh toán QR</title>
+    <meta
+      name="description"
+      content="Trang thanh toán QR chuyên nghiệp, dễ quét và dễ tải mã."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="payment-card" aria-label="Thanh toán QR">
+        <p class="page-subtitle" id="brand-subtitle">
+          Vào App Thanh toán, chọn chức năng quét mã QR rồi quét mã QR bên dưới:
+        </p>
+
+        <div class="qr-panel">
+          <div class="qr-frame">
+            <img
+              id="qr-image"
+              class="qr-image"
+              alt="Mã QR thanh toán"
+              loading="eager"
+            />
+            <div id="qr-error" class="qr-error" hidden>
+              Không thể tải mã QR. Vui lòng thử lại sau hoặc liên hệ trực tiếp.
+            </div>
+          </div>
+
+          <div class="details-panel">
+            <div class="info-card">
+              <span class="info-label">Nội dung chuyển khoản</span>
+              <strong id="transfer-note" class="transfer-note"></strong>
+            </div>
+
+            <div class="notice-card" aria-label="Lưu ý quan trọng">
+              <span class="notice-label">Lưu ý quan trọng</span>
+              <p class="notice-text">Nhớ chụp lại màn hình bill thanh toán</p>
+            </div>
+
+            <div class="actions">
+              <button id="confirm-btn" class="button button-primary" type="button">
+                Đã thanh toán, hãy kiểm tra
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      id="instruction-modal"
+      class="modal"
+      hidden
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <div class="modal-backdrop" data-close-modal="true"></div>
+      <div class="modal-content">
+        <button
+          id="close-modal-btn"
+          class="modal-close"
+          type="button"
+          aria-label="Đóng thông báo"
+        >
+          ×
+        </button>
+        <h2 id="modal-title" class="modal-title">Hướng dẫn gửi bill</h2>
+        <ol class="modal-steps">
+          <li class="modal-step">
+            <span class="step-marker" aria-hidden="true">1</span>
+            <p class="step-text">
+              <span class="step-label">Bước 1:</span>
+              <span class="step-emphasis">Chụp màn hình</span>
+              xác nhận chuyển tiền thành công ở app thanh toán của bạn
+            </p>
+          </li>
+          <li class="modal-step">
+            <span class="step-marker" aria-hidden="true">2</span>
+            <p class="step-text">
+              <span class="step-label">Bước 2:</span>
+              <span class="step-emphasis">Gửi ảnh</span>
+              vào đoạn chat ở Facebook
+            </p>
+          </li>
+          <li class="modal-step modal-step-important">
+            <span class="step-marker" aria-hidden="true">3</span>
+            <p class="step-text">
+              <span class="step-label">Bước 3:</span>
+              Bấm nút <span class="step-emphasis step-emphasis-soft">ĐÃ GỬI BILL</span> trong đoạn
+              chat ở Facebook
+            </p>
+          </li>
+        </ol>
+        <button id="acknowledge-btn" class="button button-primary" type="button">
+          Đã hiểu
+        </button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
