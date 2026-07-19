@@ -1,6 +1,6 @@
 const config = {
   qrImageUrl:
-    "https://plain-apac-prod-public.komododecks.com/202607/19/3Mxd3AaLe1dLOlZTSlaD/image.png",
+    "https://plain-apac-prod-public.komododecks.com/202607/19/WbW0nauYlkfNHakgeflQ/image.png",
   transferNote: "Tên facebook của bạn (Không dấu)",
   brandTitle: "Thanh toán QR",
   downloadFileName: "ma-qr-thanh-toan.jpg"
